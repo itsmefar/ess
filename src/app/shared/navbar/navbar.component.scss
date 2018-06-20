@@ -1,0 +1,17 @@
+   /* styling error derrrr*/
+   $topnav-background-color:#0000FF;
+   :host {
+       .navbar {
+           background-color: $topnav-background-color;
+           .navbar-brand {
+               color: #fff;
+           }
+           .nav-item > a {
+               color: #fff;
+               &:hover {
+                   color: #000000;
+               }
+           }
+       }
+       
+    }
