@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 //import { regexValidators } from '../shared/validator/validator';
-//import { AppService } from '../shared/services/app.service';
+import { AppService } from '../shared/service/app.service';
 import { Router } from '@angular/router';
 //import { User } from '../models/user.model';
 
@@ -15,18 +15,18 @@ export class LoginComponent implements OnInit {
   credentialsForm: FormGroup
   private error: string;
 
-  constructor(public _form: FormBuilder, /*public _data: AppService,*/private router:Router) {
+  constructor(public _data: AppService, public _form: FormBuilder, private router: Router) {
 
     this.credentialsForm = this._form.group({
       email: [
         '', Validators.compose([
-         // Validators.pattern(regexValidators.email),
+          // Validators.pattern(regexValidators.email),
           Validators.required
         ])
       ],
       password: [
         '', Validators.compose([
-         // Validators.pattern(regexValidators.password),
+          // Validators.pattern(regexValidators.password),
           Validators.required
         ])
       ],
@@ -37,22 +37,20 @@ export class LoginComponent implements OnInit {
   }
 
   onLoggedin() {
-    // if (this.credentialsForm.valid) {
-    //   var email = this.credentialsForm.controls['email'].value;
-    //   var password = this.credentialsForm.controls['password'].value;
+    if (this.credentialsForm.valid) {
+      var email = this.credentialsForm.controls['email'].value;
+      var password = this.credentialsForm.controls['password'].value;
 
-    //   this._data.userSignInHttp({ 'email': email, 'password': password }).subscribe(resp => {
-    //       console.log(resp);
-    //       this._data.storeUserToken(resp['token'])
-    //       // this._data.changeData(new User().deserialize(resp['user']));
-    //       this.router.navigate(['/dashboard'])
-    
-    //   }, err => {
-    //     console.log(err)
-    //     this.error = err.error;
+      this._data.loginUser({ "email": email, "password": password }).subscribe(data => {
+        console.log(data)
+        this.router.navigate([''])//ini utk route kn ke layout(once tkn login,it will route to layout)
 
-    //   });
-    // }
+      }, err => {
+        console.log(err.error)
+        this.error = err.error;
+      }
+      )
+    }
 
   }
 
