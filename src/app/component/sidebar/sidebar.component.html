@@ -1,25 +1,28 @@
 <nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
     <div class="list-group">
-        <a  routerLink="/dashboard" [routerLinkActive]="['router-link-active']"  class="list-group-item">
+        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-dashboard"></i>&nbsp;Dashboard
         </a>
-        <a routerLink="/profile" [routerLinkActive]="['router-link-active']"  class="list-group-item">
+        <a routerLink="/profile" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-user"></i>&nbsp;Profile
         </a>
-        <a routerLink="/company" [routerLinkActive]="['router-link-active']"  class="list-group-item">
+        <a routerLink="/company" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-newspaper-o"></i>&nbsp;Leave Management
         </a>
-        <a routerLink="/quotation" [routerLinkActive]="['router-link-active']"  class="list-group-item">
+        <a routerLink="/quotation" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-tasks"></i>&nbsp;Resources Management
         </a>
-        <a routerLink="/po" [routerLinkActive]="['router-link-active']"  class="list-group-item">
+        <a routerLink="/po" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-shopping-cart"></i>&nbsp;Claim Management
         </a>
-        <a routerLink="/do" [routerLinkActive]="['router-link-active']"  class="list-group-item">
+        <a routerLink="/do" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-truck"></i>&nbsp;Time Sheet Management
         </a>
         <a routerLink="/invoice" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-file-text-o"></i>&nbsp;Attendance Management
+        </a>
+        <a routerLink="/invoice" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-file-text-o"></i>&nbsp;Employee
         </a>
     </div>
 </nav>
