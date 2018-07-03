@@ -3,15 +3,16 @@ import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './layout.component';
 import { LayoutRoutingModule } from './layout-routing.module';
 import { NavbarComponent } from '../component/navbar/navbar.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SidebarComponent } from '../component/sidebar/sidebar.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   imports: [
     CommonModule,
     LayoutRoutingModule,
- NgbModule
+    NgbModule
   ],
-  declarations: [LayoutComponent,NavbarComponent,SidebarComponent]
+  declarations: [LayoutComponent, NavbarComponent, SidebarComponent, ProfileComponent]
 })
 export class LayoutModule { }

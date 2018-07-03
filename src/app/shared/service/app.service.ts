@@ -41,4 +41,8 @@ export class AppService {
     const url = `${this.expressUrl}/users/login`;
     return this.http.post(url, JSON.stringify(param), httpOptions)
   }
+
+  getUserlist(){
+    return this.http.get(`${this.expressUrl}/users/getalluser`,httpOptions)
+  }
 }

@@ -1,0 +1,32 @@
+<div>
+    <div class="row">
+
+        <div class="col col-xl-12 col-lg-12">
+            <form>
+                <button [routerLink]="['/employee/createuser']" class ="button">Add</button>
+                <button class ="button">Delete</button>
+            </form>
+            <br>
+            <div class="card mb-3">
+                <div class="card-body table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                      <tbody>
+                        <tr *ngFor="let user of user">
+                            <th>{{user.name}}</th>
+                            <th>{{user.email}}</th>
+                            <th>{{user.status}}</th>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
