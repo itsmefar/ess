@@ -2,21 +2,17 @@
   <div class="row">
     <div class="col-xl-12">
       <h2 class="page-header">
-        Profile
+        Leave Form
       </h2>
       <ol class="breadcrumb">
-
         <li class="breadcrumb-item active">
-          <i class="fa fa-fw fa-user"></i>Personal Information</li>
+          <i class="fa fa-fw fa-user"></i>Leave Information</li>
       </ol>
     </div>
   </div>
   <div class="row">
-    <div class="col col-sm-6">
+    <div class="col col-sm-4">
       <div class="card mb-3">
-        <div class="card-header">
-          User Profile
-        </div>
         <div class="card-body">
           <div class="form-content">
             <div class="form-group">
@@ -28,27 +24,38 @@
               <input type="text" class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
-              <label>Address</label>
+              <label>Start Date</label>
               <input type="email" class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
-              <label>NRIC/Passport</label>
+              <label>End Date</label>
               <input type="text" class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
-              <label>Designation</label>
+              <label>Total Number Day/s</label>
               <input type="text" class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
-              <label>Department</label>
+              <label>Type of Leave:</label>
+              <form action="/action_page.php">
+                <select name="typeofleave">
+                  <option value="al">Annual Leave</option>
+                  <option value="el">Emergency Leave</option>
+                  <option value="el">Unpaid Leave</option>
+                  <option value="el">Replacement Leave(PH)</option>
+                  <option value="el">Medical Leave</option>
+                  <option value="el">Marriage/Compassionate Leave</option>
+                  <option value="el">Others</option>
+                </select>
+              </form>
+            </div>
+            <div class="form-group">
+              <label>Remarks</label>
               <input type="text" class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
-              <label>Nationality/Region</label>
+              <label>Approve</label>
               <input type="text" class="form-control input-underline input-lg">
-            <!--  <select class="form-control" [(ngModel)]="user.nationality">
-                <option *ngFor="let country of countryList" [value]="country.name">{{country.name}}</option>
-              </select> -->
             </div>
           </div>
         </div>
@@ -57,73 +64,21 @@
         </div>
       </div>
     </div>
-    <div class="col col-sm-6">
+    <div class="col col-sm-4">
       <div class="card mb-3">
-        <div class="card-header">
-          Approval
-        </div>
         <div class="card-body">
           <div class="form-content">
             <div class="form-group">
-              <label>Level 1 Approval:</label>
-              <input type="text"  class="form-control input-underline input-lg">
-            </div>
-            <div class="form-group">
-              <label>Level 1 Notify 1:</label>
+              <label>Leave Entitled for Current Years:</label>
               <input type="text" class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
-              <label>Level 1 Notify 2:</label>
+              <label>Bring Forward:</label>
+              <input type="text" class="form-control input-underline input-lg">
+            </div>
+            <div class="form-group">
+              <label>Taken:</label>
               <input type="email" class="form-control input-underline input-lg">
-            </div>
-            <div class="form-group">
-              <label>Level 2 Approval:</label>
-              <input type="text" class="form-control input-underline input-lg">
-            </div>
-            <div class="form-group">
-              <label>Level 2 Notify 1:</label>
-              <input type="text" class="form-control input-underline input-lg">
-            </div>
-            <div class="form-group">
-              <label>Level 2 Notify 2:</label>
-              <input type="text"  class="form-control input-underline input-lg">
-            </div>
-          </div>
-          <form action="/action_page.php">
-            <select name="Employee">
-              <option value="admin">Admin</option>
-              <option value="staff">Staff</option>
-            </select>
-          </form>
-        </div>
-        <div class="card-footer">
-          <button class="btn btn-info btn-sm" (click)="updateUser()">Update</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col col-sm-12">
-      <div class="card mb-3">
-        <div class="card-header">
-          Summary of Leave
-        </div>
-        <div class="card-body">
-          <div class="form-content">
-            <div class="form-group">
-              <label>Leave Entitlement for Year:</label>
-              <input type="text"  class="form-control input-underline input-lg">
-            </div>
-            <div class="form-group">
-              <label>Leave Taken:</label>
-              <input type="text" class="form-control input-underline input-lg">
-            </div>
-            <div class="form-group">
-              <label>Cancel:</label>
-              <input type="email" class="form-control input-underline input-lg">
-            </div>
-            <div class="form-group">
-              <label>Leave Approve:</label>
-              <input type="text" class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
               <label>Balance:</label>
@@ -133,5 +88,45 @@
         </div>
       </div>
     </div>
-
+    <div class="col col-sm-4">
+      <div class="card mb-3">
+        <div class="card-header">
+          For Management use
+        </div>
+        <div class="card-body">
+          <div class="form-content">
+            <div class="form-group">
+              <label>Approve by:</label>
+              <input type="text" class="form-control input-underline input-lg">
+            </div>
+            <div class="form-group">
+              <label>Level 1 Approval Date:</label>
+              <input type="text" class="form-control input-underline input-lg">
+            </div>
+            <div class="form-group">
+              <label>Level 1 Approve:</label>
+              <input type="email" class="form-control input-underline input-lg">
+            </div>
+            <div class="form-group">
+              <label>Level 2 Approval Date:</label>
+              <input type="text" class="form-control input-underline input-lg">
+            </div>
+            <div class="form-group">
+              <label>Level 2 Approve:</label>
+              <input type="text" class="form-control input-underline input-lg">
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-info btn-sm" (click)="updateUser()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form>
+      <button [routerLink]="['']" class ="button">Cancel</button>
+      <button [routerLink]="['']" class ="button">Reject</button>
+      <button [routerLink]="['']" class ="button">Approve</button>
+      <button [routerLink]="['']" class ="button">Submit</button>
+  </form>
 </div>

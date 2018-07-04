@@ -13,7 +13,8 @@ const routes: Routes = [
         children: [
             { path: '', redirectTo: 'profile' },
             { path: 'profile', component: ProfileComponent },
-            { path: 'employee', loadChildren:'./employee/employee.module#EmployeeModule' }
+            { path: 'employee', loadChildren:'./employee/employee.module#EmployeeModule' },
+            { path: 'leave', loadChildren:'./leave/leave.module#LeaveModule' }
         ]
 
     }
