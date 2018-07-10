@@ -9,7 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppService } from './shared/service/app.service';
-
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -23,9 +24,11 @@ import { AppService } from './shared/service/app.service';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
-  providers: [AppService],
+  providers: [AppService,MatDatepickerModule],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

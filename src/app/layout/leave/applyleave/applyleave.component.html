@@ -24,28 +24,28 @@
               <input type="text" class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
-              <label>Start Date</label>
-              <input type="email" class="form-control input-underline input-lg">
+              <label>Start Date</label><br>
+                <input type="date" placeholder="Choose a date">
             </div>
             <div class="form-group">
-              <label>End Date</label>
-              <input type="text" class="form-control input-underline input-lg">
+              <label>End Date</label><br>
+              <input type="date" placeholder="Choose a date">
             </div>
             <div class="form-group">
               <label>Total Number Day/s</label>
               <input type="text" class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
-              <label>Type of Leave:</label>
+              <label>Type of Leave</label>
               <form action="/action_page.php">
                 <select name="typeofleave">
                   <option value="al">Annual Leave</option>
                   <option value="el">Emergency Leave</option>
-                  <option value="el">Unpaid Leave</option>
-                  <option value="el">Replacement Leave(PH)</option>
-                  <option value="el">Medical Leave</option>
-                  <option value="el">Marriage/Compassionate Leave</option>
-                  <option value="el">Others</option>
+                  <option value="ul">Unpaid Leave</option>
+                  <option value="rl">Replacement Leave(PH)</option>
+                  <option value="ml">Medical Leave</option>
+                  <option value="mc">Marriage/Compassionate Leave</option>
+                  <option value="oth">Others</option>
                 </select>
               </form>
             </div>
@@ -59,9 +59,7 @@
             </div>
           </div>
         </div>
-        <div class="card-footer">
-          <button class="btn btn-info btn-sm" (click)="updateUser()">Update</button>
-        </div>
+
       </div>
     </div>
     <div class="col col-sm-4">
@@ -69,19 +67,19 @@
         <div class="card-body">
           <div class="form-content">
             <div class="form-group">
-              <label>Leave Entitled for Current Years:</label>
+              <label>Leave Entitled for Current Years</label>
               <input type="text" class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
-              <label>Bring Forward:</label>
+              <label>Bring Forward</label>
               <input type="text" class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
-              <label>Taken:</label>
-              <input type="email" class="form-control input-underline input-lg">
+              <label>Taken</label>
+              <input type="text" class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
-              <label>Balance:</label>
+              <label>Balance</label>
               <input type="text" class="form-control input-underline input-lg">
             </div>
           </div>
@@ -96,37 +94,37 @@
         <div class="card-body">
           <div class="form-content">
             <div class="form-group">
-              <label>Approve by:</label>
+              <label>Approve by</label>
               <input type="text" class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
-              <label>Level 1 Approval Date:</label>
+              <label>Level 1 Approval Date</label>
               <input type="text" class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
-              <label>Level 1 Approve:</label>
-              <input type="email" class="form-control input-underline input-lg">
-            </div>
-            <div class="form-group">
-              <label>Level 2 Approval Date:</label>
+              <label>Level 1 Approve</label>
               <input type="text" class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
-              <label>Level 2 Approve:</label>
+              <label>Level 2 Approval Date</label>
+              <input type="text" class="form-control input-underline input-lg">
+            </div>
+            <div class="form-group">
+              <label>Level 2 Approve</label>
               <input type="text" class="form-control input-underline input-lg">
             </div>
           </div>
         </div>
         <div class="card-footer">
-          <button class="btn btn-info btn-sm" (click)="updateUser()">Submit</button>
+          <button class="btn btn-info btn-sm" (click)="updateUser()">Update</button>
         </div>
       </div>
     </div>
   </div>
   <form>
-      <button [routerLink]="['']" class ="button">Cancel</button>
-      <button [routerLink]="['']" class ="button">Reject</button>
-      <button [routerLink]="['']" class ="button">Approve</button>
-      <button [routerLink]="['']" class ="button">Submit</button>
+    <button [routerLink]="['/leave/leavelist']" class="button">Cancel</button>
+    <button [routerLink]="['']" class="button">Reject</button>
+    <button [routerLink]="['']" class="button">Approve</button>
+    <button [routerLink]="['']" class="button">Submit</button>
   </form>
 </div>

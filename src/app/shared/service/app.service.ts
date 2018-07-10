@@ -45,4 +45,5 @@ export class AppService {
   getUserlist(){
     return this.http.get(`${this.expressUrl}/users/getalluser`,httpOptions)
   }
+
 }

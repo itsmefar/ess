@@ -6,6 +6,7 @@ import { NavbarComponent } from '../component/navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SidebarComponent } from '../component/sidebar/sidebar.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ResourcesComponent } from './resources/resources.component';
 
 @NgModule({
   imports: [
@@ -13,6 +14,6 @@ import { ProfileComponent } from './profile/profile.component';
     LayoutRoutingModule,
     NgbModule
   ],
-  declarations: [LayoutComponent, NavbarComponent, SidebarComponent, ProfileComponent]
+  declarations: [LayoutComponent, NavbarComponent, SidebarComponent, ProfileComponent, ResourcesComponent]
 })
 export class LayoutModule { }

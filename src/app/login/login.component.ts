@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
       this._data.loginUser({ "email": email, "password": password }).subscribe(data => {
         console.log(data)
         this.router.navigate([''])//ini utk route kn ke layout(once tkn login,it will route to layout)
-
+        localStorage.setItem('token',data['token'])
       }, err => {
         console.log(err.error)
         this.error = err.error;

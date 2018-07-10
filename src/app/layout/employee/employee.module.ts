@@ -5,10 +5,12 @@ import { EmployeeRoutingModule } from './employee-routing.module';
 import { UserlistComponent } from './userlist/userlist.component';
 import { CreateuserComponent } from './createuser/createuser.component';
 import { ProfiledetailComponent } from './profiledetail/profiledetail.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
-    CommonModule,EmployeeRoutingModule
+    CommonModule,EmployeeRoutingModule,
+    ReactiveFormsModule,FormsModule
   ],
   declarations: [EmployeeComponent, UserlistComponent, CreateuserComponent, ProfiledetailComponent]
 })
