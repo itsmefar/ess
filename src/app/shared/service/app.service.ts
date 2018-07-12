@@ -26,6 +26,7 @@ export class AppService {
 
   createUser(data) {
     return this.http.post(`${this.expressUrl}/users`, JSON.stringify(data), httpOptions)
+
     
   }
 
@@ -33,6 +34,10 @@ export class AppService {
    return this.http.post(`${this.expressUrl}/users/login`,JSON.stringify(data),httpOptions)
   }
 
+  getCurrentUser(token) { 
+    httpOptions.headers = httpOptions.headers.set('x-auth',token);
+    return this.http.get(`${this.expressUrl}/users/getuser`,httpOptions)
+   }
   // changeData(data){
   //   this.users.next(data);
   // }

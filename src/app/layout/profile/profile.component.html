@@ -21,34 +21,31 @@
           <div class="form-content">
             <div class="form-group">
               <label>First Name</label>
-              <input type="text" class="form-control input-underline input-lg">
+              <input readonly type="text" value='{{user.firstname}}' class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
               <label>Last Name</label>
-              <input type="text" class="form-control input-underline input-lg">
+              <input readonly type="text" value='{{user.lastname}}' class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
               <label>Address</label>
-              <input type="email" class="form-control input-underline input-lg">
+              <input readonly type="text" value='{{user.address}}'class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
               <label>NRIC/Passport</label>
-              <input type="text" class="form-control input-underline input-lg">
+              <input readonly type="text" value='{{user.nric}}' class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
               <label>Designation</label>
-              <input type="text" class="form-control input-underline input-lg">
+              <input readonly type="text" value='{{user.designation}}' class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
               <label>Department</label>
-              <input type="text" class="form-control input-underline input-lg">
+              <input readonly type="text" value='{{user.department}}' class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
               <label>Nationality/Region</label>
-              <input type="text" class="form-control input-underline input-lg">
-            <!--  <select class="form-control" [(ngModel)]="user.nationality">
-                <option *ngFor="let country of countryList" [value]="country.name">{{country.name}}</option>
-              </select> -->
+              <input readonly type="text" value='{{user.nationality}}' class="form-control input-underline input-lg">
             </div>
           </div>
         </div>
@@ -64,36 +61,32 @@
           <div class="form-content">
             <div class="form-group">
               <label>Level 1 Approval</label>
-              <input type="text"  class="form-control input-underline input-lg">
+              <input readonly type="text" value='{{user.level1app}}' class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
               <label>Level 1 Notify 1</label>
-              <input type="text" class="form-control input-underline input-lg">
+              <input readonly type="text" class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
               <label>Level 1 Notify 2</label>
-              <input type="email" class="form-control input-underline input-lg">
+              <input readonly type="email" class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
               <label>Level 2 Approval</label>
-              <input type="text" class="form-control input-underline input-lg">
+              <input readonly type="text" value='{{user.level2app}}' class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
               <label>Level 2 Notify 1</label>
-              <input type="text" class="form-control input-underline input-lg">
+              <input readonly type="text" class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
               <label>Level 2 Notify 2</label>
-              <input type="text"  class="form-control input-underline input-lg">
+              <input readonly type="text"  class="form-control input-underline input-lg">
             </div>
           </div>
           <label>Group</label>
-          <form action="/action_page.php">
-            <select name="Employee">
-              <option value="admin">Admin</option>
-              <option value="staff">Staff</option>
-            </select>
-          </form>
+          <input readonly type="text" value='{{user.group}}' class="form-control input-underline input-lg">
+         
         </div>
 
       </div>
@@ -108,23 +101,23 @@
           <div class="form-content">
             <div class="form-group">
               <label>Leave Entitlement for Year</label>
-              <input type="text"  class="form-control input-underline input-lg">
+              <input readonly type="text" value='{{user.leaveperyear}}' class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
               <label>Leave Taken</label>
-              <input type="text" class="form-control input-underline input-lg">
+              <input readonly type="text" class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
               <label>Cancel</label>
-              <input type="email" class="form-control input-underline input-lg">
+              <input readonly type="email" class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
               <label>Leave Approve</label>
-              <input type="text" class="form-control input-underline input-lg">
+              <input readonly type="text" class="form-control input-underline input-lg">
             </div>
             <div class="form-group">
               <label>Balance</label>
-              <input type="text" class="form-control input-underline input-lg">
+              <input readonly type="text" class="form-control input-underline input-lg">
             </div>
           </div>
         </div>
