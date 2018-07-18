@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../../../shared/service/app.service';
 
 @Component({
   selector: 'app-leavelist',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeavelistComponent implements OnInit {
 
-  constructor() { }
+  leave;
+
+  constructor(private data: AppService) { }
 
   ngOnInit() {
+    var token = localStorage.getItem('token');
+    this.data.getLeavelist(token).subscribe(resp => {
+      console.log(resp)
+      this.leave = resp;
+    })
   }
-
 }

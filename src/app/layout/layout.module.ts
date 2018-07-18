@@ -7,6 +7,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SidebarComponent } from '../component/sidebar/sidebar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ResourcesComponent } from './resources/resources.component';
+import { ClaimComponent } from './claim/claim.component';
+import { TimesheetComponent } from './timesheet/timesheet.component';
+import { AttendanceComponent } from './attendance/attendance.component';
 
 @NgModule({
   imports: [
@@ -14,6 +17,7 @@ import { ResourcesComponent } from './resources/resources.component';
     LayoutRoutingModule,
     NgbModule
   ],
-  declarations: [LayoutComponent, NavbarComponent, SidebarComponent, ProfileComponent, ResourcesComponent]
+  declarations: [LayoutComponent, NavbarComponent, SidebarComponent,
+    ProfileComponent, ResourcesComponent, ClaimComponent, TimesheetComponent, AttendanceComponent]
 })
 export class LayoutModule { }

@@ -26,8 +26,6 @@ export class AppService {
 
   createUser(data) {
     return this.http.post(`${this.expressUrl}/users`, JSON.stringify(data), httpOptions)
-
-    
   }
 
   loginUser(data) { 
@@ -41,7 +39,6 @@ export class AppService {
   // changeData(data){
   //   this.users.next(data);
   // }
-
   userSignInHttp(param) {
     const url = `${this.expressUrl}/users/login`;
     return this.http.post(url, JSON.stringify(param), httpOptions)
@@ -50,5 +47,11 @@ export class AppService {
   getUserlist(){
     return this.http.get(`${this.expressUrl}/users/getalluser`,httpOptions)
   }
+  
+  getLeavelist(token){
+    httpOptions.headers = httpOptions.headers.set('x-auth',token);
+    return this.http.get(`${this.expressUrl}/leave/getallleave`,httpOptions)
+  }
+
 
 }

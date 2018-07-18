@@ -13,17 +13,18 @@
                         <thead>
                             <tr>
                                 <th>Type of Leave</th>
-                                <th>Reason</th>
-                                <th>Date</th>
+                                <th>Remarks</th>
+                                <th>Number of Leave</th>
                                 <th>Status</th>
                             </tr>
                         </thead>
                       <tbody>
-                       <!-- <tr *ngFor="let user of user">
-                            <th>{{user.name}}</th>
-                            <th>{{user.email}}</th>
-                            <th>{{user.status}}</th>
-                        </tr>-->
+                        <tr *ngFor="let leave of leave">
+                            <th>{{leave.typeofleave}}</th>
+                            <th>{{leave.remarks}}</th>
+                            <th>{{leave.totalday}}</th>
+                            <th>{{leave.status}}</th>
+                        </tr>
                       </tbody>
                     </table>
                 </div>
